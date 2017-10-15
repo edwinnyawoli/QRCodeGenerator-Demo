@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.edwinnyawoli.qrcodegenerator.MainActivity">
+
+    <TextView
+        android:id="@+id/text_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:text="Type a message in the EditText below to generate a QR Code"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <ImageView
+        android:id="@+id/qr_code_image_view"
+        android:layout_width="256dp"
+        android:layout_height="256dp"
+        android:layout_below="@id/text_view"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"
+        android:background="@android:color/black" />
+
+    <EditText
+        android:id="@+id/message_edit_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@id/qr_code_image_view"
+        android:layout_alignLeft="@id/qr_code_image_view"
+        android:layout_alignRight="@id/qr_code_image_view"
+        android:layout_alignStart="@id/qr_code_image_view"
+        android:layout_below="@id/qr_code_image_view"
+        android:layout_marginTop="8dp"
+        android:hint="@string/message" />
+
+    <Button
+        android:id="@+id/generate_qr_code_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/message_edit_text"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="8dp"
+        android:text="@string/generate_qr_code" />
+</RelativeLayout>
